@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        playfair: ['Playfair Display', 'serif'],
-        inter: ['Inter', 'sans-serif'],
+        'helvetica-neue': ['Helvetica Neue LT Pro', 'HelveticaNeue LT 27 UltLtCn', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
+        'helvetica-narrow': ['Helvetica LT Narrow', 'Helvetica Neue Condensed', 'Helvetica Condensed', 'Arial Narrow', 'sans-serif'],
+        'helvetica': ['Helvetica Neue LT', 'Helvetica Neue', 'Helvetica', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

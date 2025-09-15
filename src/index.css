@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Italian Boats Luxury Design System */
+/* Italian Boats Luxury Design System - Typography Helvetica */
 
 @layer base {
   :root {
@@ -46,6 +44,7 @@
     /* Animations */
     --transition-luxury: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     
     /* Shadcn Updates with Italian Theme */
     --primary: var(--italian-navy);
@@ -75,19 +74,51 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply bg-background text-foreground;
+    font-family: 'Helvetica LT Narrow', 'Helvetica Neue Condensed', 'Helvetica Condensed', 'Arial Narrow', sans-serif;
     overflow-x: hidden;
   }
   
+  /* Helvetica Typography Hierarchy */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
+    font-family: 'Helvetica Neue LT Pro', 'HelveticaNeue LT 27 UltLtCn', 'Helvetica Neue', 'Helvetica', sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+  }
+  
+  /* Specific heading weights and spacing */
+  h1 {
+    font-weight: 100;
+    letter-spacing: -0.04em;
+  }
+  
+  h2 {
+    font-weight: 200;
+    letter-spacing: -0.03em;
+  }
+  
+  h3, h4 {
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+  
+  h5, h6 {
+    font-weight: 400;
+  }
+  
+  /* Body text with Helvetica Narrow */
+  p, span, div:not(.no-narrow), li, label, input, textarea {
+    font-family: 'Helvetica LT Narrow', 'Helvetica Neue Condensed', 'Helvetica Condensed', 'Arial Narrow', sans-serif;
   }
 }
 
 @layer components {
   /* Luxury Button Variants - Fixed color classes */
   .btn-luxury {
-    @apply bg-gradient-to-r from-luxury-gold to-golden-sunset font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 active:scale-95;
+    @apply font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 active:scale-95;
+    font-family: 'Helvetica Neue LT Pro', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    background: var(--gradient-luxury);
     color: hsl(var(--italian-navy));
     box-shadow: var(--shadow-luxury);
   }
@@ -97,7 +128,9 @@
   }
   
   .btn-italian {
-    @apply bg-gradient-to-r font-semibold px-8 py-4 rounded-xl text-white transition-all duration-300 hover:scale-105;
+    @apply font-semibold px-8 py-4 rounded-xl text-white transition-all duration-300 hover:scale-105;
+    font-family: 'Helvetica Neue LT Pro', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
     background: var(--gradient-italian);
     box-shadow: var(--shadow-elegant);
   }
@@ -108,6 +141,8 @@
   
   .btn-outline-luxury {
     @apply border-2 bg-transparent font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105;
+    font-family: 'Helvetica Neue LT Pro', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
     border-color: hsl(var(--luxury-gold));
     color: hsl(var(--luxury-gold));
   }
@@ -119,7 +154,11 @@
 
   /* Floating Badge */
   .floating-badge {
-    @apply bg-white/90 backdrop-blur-md text-italian-navy px-6 py-3 rounded-full shadow-elegant border border-platinum animate-pulse;
+    @apply bg-white/90 backdrop-blur-md px-6 py-3 rounded-full shadow-elegant border animate-pulse;
+    color: hsl(var(--italian-navy));
+    border-color: hsl(var(--platinum));
+    font-family: 'Helvetica Neue LT Pro', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
   }
 
   /* Wave Animation */
@@ -141,6 +180,18 @@
     white-space: nowrap;
     animation: typewriter 3s steps(40, end), blink-caret 0.75s step-end infinite;
   }
+
+  /* Fixed luxury card with proper shadow */
+  .luxury-card {
+    @apply bg-white/95 backdrop-blur-sm rounded-2xl border transition-all duration-500 hover:-translate-y-2 hover:scale-105;
+    border-color: hsl(var(--silver-mist));
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  .luxury-card:hover {
+    box-shadow: var(--shadow-gold);
+  }
+
   /* Service Cards with proper colors */
   .service-card {
     @apply p-8 cursor-pointer bg-white/95 backdrop-blur-sm rounded-2xl border transition-all duration-500 hover:-translate-y-2 hover:scale-105;
@@ -226,17 +277,6 @@
   .service-bullet-ocean-blue {
     background-color: hsl(var(--ocean-blue));
   }
-  
-  /* Fixed luxury card with proper shadow */
-  .luxury-card {
-    @apply bg-white/95 backdrop-blur-sm rounded-2xl border transition-all duration-500 hover:-translate-y-2 hover:scale-105;
-    border-color: hsl(var(--silver-mist));
-    box-shadow: var(--shadow-luxury);
-  }
-  
-  .luxury-card:hover {
-    box-shadow: var(--shadow-gold);
-  }
 }
 
 @layer utilities {
@@ -310,6 +350,19 @@
   
   .transition-bounce {
     transition: var(--transition-bounce);
+  }
+
+  /* Typography utilities for Helvetica */
+  .font-helvetica-neue {
+    font-family: 'Helvetica Neue LT Pro', 'HelveticaNeue LT 27 UltLtCn', 'Helvetica Neue', 'Helvetica', sans-serif;
+  }
+
+  .font-helvetica-narrow {
+    font-family: 'Helvetica LT Narrow', 'Helvetica Neue Condensed', 'Helvetica Condensed', 'Arial Narrow', sans-serif;
+  }
+
+  .font-helvetica {
+    font-family: 'Helvetica Neue LT', 'Helvetica Neue', 'Helvetica', '-apple-system', 'BlinkMacSystemFont', sans-serif;
   }
 }
 
