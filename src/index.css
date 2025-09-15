@@ -143,7 +143,7 @@
   }
   /* Service Cards with proper colors */
   .service-card {
-    @apply p-8 group cursor-pointer bg-white/95 backdrop-blur-sm rounded-2xl border transition-all duration-500 hover:-translate-y-2 hover:scale-105;
+    @apply p-8 cursor-pointer bg-white/95 backdrop-blur-sm rounded-2xl border transition-all duration-500 hover:-translate-y-2 hover:scale-105;
     border-color: hsl(var(--silver-mist));
     box-shadow: var(--shadow-luxury);
   }
