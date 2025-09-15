@@ -1,96 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Italian Boats Luxury Design System */
 
 @layer base {
   :root {
+    /* Italian Luxury Color Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 215 28% 17%;
+    
+    /* Italian Navy & Ocean Blues */
+    --italian-navy: 215 47% 14%;
+    --ocean-blue: 215 54% 24%;
+    --deep-blue: 215 60% 35%;
+    --marine-blue: 210 75% 45%;
+    
+    /* Luxury Golds & Warm Tones */
+    --luxury-gold: 43 96% 56%;
+    --golden-sunset: 35 100% 62%;
+    --warm-bronze: 30 100% 40%;
+    
+    /* Italian Reds */
+    --italian-red: 355 78% 60%;
+    --deep-red: 355 85% 45%;
+    
+    /* Sophisticated Grays */
+    --platinum: 210 8% 85%;
+    --silver-mist: 210 12% 92%;
+    --charcoal: 215 25% 25%;
+    
+    /* Ocean Gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(var(--ocean-blue)), hsl(var(--marine-blue)));
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--luxury-gold)), hsl(var(--golden-sunset)));
+    --gradient-italian: linear-gradient(135deg, hsl(var(--italian-navy)), hsl(var(--deep-blue)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--golden-sunset)), hsl(var(--italian-red)));
+    
+    /* Premium Shadows */
+    --shadow-luxury: 0 20px 40px -10px hsl(var(--italian-navy) / 0.3);
+    --shadow-gold: 0 10px 30px -5px hsl(var(--luxury-gold) / 0.4);
+    --shadow-elegant: 0 8px 32px -8px hsl(var(--ocean-blue) / 0.25);
+    
+    /* Animations */
+    --transition-luxury: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Shadcn Updates with Italian Theme */
+    --primary: var(--italian-navy);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--silver-mist);
+    --secondary-foreground: var(--italian-navy);
+    --muted: var(--platinum);
+    --muted-foreground: var(--charcoal);
+    --accent: var(--luxury-gold);
+    --accent-foreground: var(--italian-navy);
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: var(--foreground);
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --popover-foreground: var(--foreground);
+    --destructive: var(--italian-red);
+    --destructive-foreground: 0 0% 100%;
+    --border: var(--platinum);
+    --input: var(--silver-mist);
+    --ring: var(--luxury-gold);
+    --radius: 0.75rem;
   }
 }
 
@@ -100,6 +75,304 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    overflow-x: hidden;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  /* Luxury Button Variants - Fixed color classes */
+  .btn-luxury {
+    @apply bg-gradient-to-r from-luxury-gold to-golden-sunset font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 active:scale-95;
+    color: hsl(var(--italian-navy));
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  .btn-luxury:hover {
+    box-shadow: var(--shadow-gold);
+  }
+  
+  .btn-italian {
+    @apply bg-gradient-to-r font-semibold px-8 py-4 rounded-xl text-white transition-all duration-300 hover:scale-105;
+    background: var(--gradient-italian);
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .btn-italian:hover {
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  .btn-outline-luxury {
+    @apply border-2 bg-transparent font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105;
+    border-color: hsl(var(--luxury-gold));
+    color: hsl(var(--luxury-gold));
+  }
+  
+  .btn-outline-luxury:hover {
+    background-color: hsl(var(--luxury-gold));
+    color: hsl(var(--italian-navy));
+  }
+
+  /* Floating Badge */
+  .floating-badge {
+    @apply bg-white/90 backdrop-blur-md text-italian-navy px-6 py-3 rounded-full shadow-elegant border border-platinum animate-pulse;
+  }
+
+  /* Wave Animation */
+  .wave-animation {
+    background: linear-gradient(-90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: wave 2s infinite;
+  }
+  
+  /* Parallax Elements */
+  .parallax-element {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+  }
+
+  /* Hero Text Animations */
+  .typewriter {
+    overflow: hidden;
+    border-right: 2px solid hsl(var(--luxury-gold));
+    white-space: nowrap;
+    animation: typewriter 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  /* Service Cards with proper colors */
+  .service-card {
+    @apply p-8 group cursor-pointer bg-white/95 backdrop-blur-sm rounded-2xl border transition-all duration-500 hover:-translate-y-2 hover:scale-105;
+    border-color: hsl(var(--silver-mist));
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  .service-card:hover {
+    box-shadow: var(--shadow-gold);
+  }
+  
+  /* Service icon backgrounds - using CSS variables */
+  .service-icon-luxury-gold {
+    background-color: hsl(var(--luxury-gold) / 0.1);
+  }
+  
+  .service-icon-marine-blue {
+    background-color: hsl(var(--marine-blue) / 0.1);
+  }
+  
+  .service-icon-italian-red {
+    background-color: hsl(var(--italian-red) / 0.1);
+  }
+  
+  .service-icon-deep-blue {
+    background-color: hsl(var(--deep-blue) / 0.1);
+  }
+  
+  .service-icon-golden-sunset {
+    background-color: hsl(var(--golden-sunset) / 0.1);
+  }
+  
+  .service-icon-ocean-blue {
+    background-color: hsl(var(--ocean-blue) / 0.1);
+  }
+  
+  /* Service icon colors */
+  .service-text-luxury-gold {
+    color: hsl(var(--luxury-gold));
+  }
+  
+  .service-text-marine-blue {
+    color: hsl(var(--marine-blue));
+  }
+  
+  .service-text-italian-red {
+    color: hsl(var(--italian-red));
+  }
+  
+  .service-text-deep-blue {
+    color: hsl(var(--deep-blue));
+  }
+  
+  .service-text-golden-sunset {
+    color: hsl(var(--golden-sunset));
+  }
+  
+  .service-text-ocean-blue {
+    color: hsl(var(--ocean-blue));
+  }
+  
+  /* Service feature bullets */
+  .service-bullet-luxury-gold {
+    background-color: hsl(var(--luxury-gold));
+  }
+  
+  .service-bullet-marine-blue {
+    background-color: hsl(var(--marine-blue));
+  }
+  
+  .service-bullet-italian-red {
+    background-color: hsl(var(--italian-red));
+  }
+  
+  .service-bullet-deep-blue {
+    background-color: hsl(var(--deep-blue));
+  }
+  
+  .service-bullet-golden-sunset {
+    background-color: hsl(var(--golden-sunset));
+  }
+  
+  .service-bullet-ocean-blue {
+    background-color: hsl(var(--ocean-blue));
+  }
+  
+  /* Fixed luxury card with proper shadow */
+  .luxury-card {
+    @apply bg-white/95 backdrop-blur-sm rounded-2xl border transition-all duration-500 hover:-translate-y-2 hover:scale-105;
+    border-color: hsl(var(--silver-mist));
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  .luxury-card:hover {
+    box-shadow: var(--shadow-gold);
+  }
+}
+
+@layer utilities {
+  /* Custom Gradients */
+  .bg-gradient-ocean {
+    background: var(--gradient-ocean);
+  }
+  
+  .bg-gradient-luxury {
+    background: var(--gradient-luxury);
+  }
+  
+  .bg-gradient-italian {
+    background: var(--gradient-italian);
+  }
+  
+  .bg-gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+
+  /* Italian Color Classes */
+  .text-italian-navy {
+    color: hsl(var(--italian-navy));
+  }
+  
+  .text-ocean-blue {
+    color: hsl(var(--ocean-blue));
+  }
+  
+  .text-luxury-gold {
+    color: hsl(var(--luxury-gold));
+  }
+  
+  .text-italian-red {
+    color: hsl(var(--italian-red));
+  }
+  
+  .bg-italian-navy {
+    background-color: hsl(var(--italian-navy));
+  }
+  
+  .bg-luxury-gold {
+    background-color: hsl(var(--luxury-gold));
+  }
+  
+  .bg-silver-mist {
+    background-color: hsl(var(--silver-mist));
+  }
+
+  /* Shadows */
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Transitions */
+  .transition-luxury {
+    transition: var(--transition-luxury);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
+
+/* Keyframes for Animations */
+@keyframes wave {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: hsl(var(--luxury-gold)); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-luxury {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: var(--shadow-luxury);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-gold);
+  }
+}
+
+/* Ocean Wave SVG */
+.ocean-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z'/%3E%3C/svg%3E") repeat-x;
 }
