@@ -9,27 +9,42 @@ import heroSlide5 from '@/assets/hero-slide-5.jpg';
 const slides = [
   {
     image: heroSlide1,
-    title: "Na Italian Boats você não compra barco usado.",
+    titleParts: [
+      { text: "Na Italian Boats você ", font: "primary" },
+      { text: "não compra barco usado.", font: "secondary" }
+    ],
     subtitle: "Você encomenda um barco novo, feito do zero, sob medida para você."
   },
   {
     image: heroSlide2,
-    title: "Tradição Italiana em Cada Detalhe",
+    titleParts: [
+      { text: "Tradição Italiana em ", font: "secondary" },
+      { text: "Cada Detalhe", font: "primary" }
+    ],
     subtitle: "25+ anos criando embarcações exclusivas com a excelência do design italiano."
   },
   {
     image: heroSlide3,
-    title: "Marina Porto Bello - SC",
+    titleParts: [
+      { text: "Marina Porto Bello", font: "primary" },
+      { text: " - SC", font: "secondary" }
+    ],
     subtitle: "Localização privilegiada com infraestrutura completa para seu projeto náutico."
   },
   {
     image: heroSlide4,
-    title: "Artesãos Especializados",
+    titleParts: [
+      { text: "Artesãos ", font: "secondary" },
+      { text: "Especializados", font: "primary" }
+    ],
     subtitle: "Cada barco é uma obra de arte, construído com técnicas tradicionais italianas."
   },
   {
     image: heroSlide5,
-    title: "Clientes Satisfeitos",
+    titleParts: [
+      { text: "Clientes ", font: "primary" },
+      { text: "Satisfeitos", font: "secondary" }
+    ],
     subtitle: "Mais de 1000+ embarcações entregues e famílias realizando seus sonhos."
   }
 ];
@@ -88,7 +103,7 @@ const HeroSlider = () => {
           >
             <img
               src={slide.image}
-              alt={slide.title}
+              alt={slide.titleParts.map(part => part.text).join('')}
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-italian-navy/80 via-transparent to-italian-navy/60" />
@@ -105,10 +120,17 @@ const HeroSlider = () => {
                 isAnimating ? 'opacity-0 transform translate-y-8' : 'opacity-100 transform translate-y-0'
               }`}
             >
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold text-white mb-6 leading-tight">
-                {slides[currentSlide].title}
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                {slides[currentSlide].titleParts.map((part, index) => (
+                  <span
+                    key={index}
+                    className={part.font === 'primary' ? 'hero-title-primary' : 'hero-title-secondary'}
+                  >
+                    {part.text}
+                  </span>
+                ))}
               </h1>
-              <p className="text-xl md:text-2xl text-silver-mist mb-10 max-w-3xl leading-relaxed">
+              <p className="hero-subtitle text-xl md:text-2xl text-silver-mist mb-10 max-w-3xl leading-relaxed">
                 {slides[currentSlide].subtitle}
               </p>
               

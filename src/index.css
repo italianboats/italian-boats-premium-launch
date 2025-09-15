@@ -110,6 +110,27 @@
   p, span, div:not(.no-narrow), li, label, input, textarea {
     font-family: 'Helvetica LT Narrow', 'Helvetica Neue Condensed', 'Helvetica Condensed', 'Arial Narrow', sans-serif;
   }
+  
+  /* Hero Section Specific Typography */
+  .hero-title-primary {
+    font-family: 'HelveticaNeue LT 27 UltLtCn', 'Helvetica Neue UltraLight Extended', 'Helvetica Neue UltraLight', sans-serif;
+    font-weight: 100;
+    letter-spacing: -0.05em;
+    line-height: 0.9;
+  }
+  
+  .hero-title-secondary {
+    font-family: 'Helvetica Neue LT W1G', 'Helvetica Neue Medium', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  
+  .hero-subtitle {
+    font-family: 'Helvetica LT Narrow', 'Helvetica Neue Condensed', sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
 }
 
 @layer components {
@@ -363,6 +384,19 @@
 
   .font-helvetica {
     font-family: 'Helvetica Neue LT', 'Helvetica Neue', 'Helvetica', '-apple-system', 'BlinkMacSystemFont', sans-serif;
+  }
+
+  /* Hero Section Typography Classes */
+  .font-hero-primary {
+    font-family: 'HelveticaNeue LT 27 UltLtCn', 'Helvetica Neue UltraLight Extended', 'Helvetica Neue UltraLight', sans-serif;
+  }
+
+  .font-hero-secondary {
+    font-family: 'Helvetica Neue LT W1G', 'Helvetica Neue Medium', 'Helvetica Neue', sans-serif;
+  }
+
+  .font-hero-subtitle {
+    font-family: 'Helvetica LT Narrow', 'Helvetica Neue Condensed', sans-serif;
   }
 }
 
