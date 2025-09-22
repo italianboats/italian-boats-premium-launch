@@ -46,22 +46,22 @@ const ContactSection = () => {
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent(`Olá! Gostaria de conhecer mais sobre os barcos personalizados da Italian Boats.`);
-    window.open(`https://wa.me/5547999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5562993639673?text=${message}`, '_blank');
   };
 
   const contactInfo = [
     {
       icon: MapPin,
       title: "Localização",
-      info: "Marina Porto Bello - SC",
-      details: "Rua das Embarcações, 123",
+      info: "Goiânia - GO",
+      details: "Av. Ville, 1515 - Residential Eli Forte, 74369-023",
       color: "luxury-gold"
     },
     {
       icon: Phone,
       title: "Telefone",
-      info: "(47) 99999-9999",
-      details: "Segunda a Sábado",
+      info: "(62) 9 9363-9673",
+      details: "WhatsApp disponível",
       color: "marine-blue"
     },
     {
@@ -74,7 +74,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "E-mail",
-      info: "contato@italianboats.com.br",
+      info: "grklima@gmail.com",
       details: "Resposta em 24h",
       color: "deep-blue"
     }

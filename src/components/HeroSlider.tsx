@@ -29,11 +29,11 @@ const HeroSlider = () => {
   }, []);
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/5547999999999?text=Olá! Gostaria de saber mais sobre barcos personalizados da Italian Boats.', '_blank');
+    window.open('https://wa.me/5562993639673?text=Olá! Gostaria de saber mais sobre barcos personalizados da Italian Boats.', '_blank');
   };
 
   const handleCall = () => {
-    window.open('tel:+5547999999999', '_self');
+    window.open('tel:+5562993639673', '_self');
   };
 
   return (

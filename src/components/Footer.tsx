@@ -150,22 +150,22 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-luxury-gold mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-white font-medium">Marina Porto Bello - SC</p>
-                  <p className="text-silver-mist text-sm">Rua das Embarcações, 123</p>
+                  <p className="text-white font-medium">Goiânia - GO</p>
+                  <p className="text-silver-mist text-sm">Av. Ville, 1515 - Residential Eli Forte, 74369-023</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-luxury-gold" />
-                <a href="tel:+5547999999999" className="text-silver-mist hover:text-luxury-gold transition-colors duration-300">
-                  (47) 99999-9999
+                <a href="tel:+5562993639673" className="text-silver-mist hover:text-luxury-gold transition-colors duration-300">
+                  (62) 9 9363-9673
                 </a>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-luxury-gold" />
-                <a href="mailto:contato@italianboats.com.br" className="text-silver-mist hover:text-luxury-gold transition-colors duration-300">
-                  contato@italianboats.com.br
+                <a href="mailto:grklima@gmail.com" className="text-silver-mist hover:text-luxury-gold transition-colors duration-300">
+                  grklima@gmail.com
                 </a>
               </div>
             </div>
