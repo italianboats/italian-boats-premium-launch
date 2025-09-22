@@ -65,21 +65,23 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-6 pb-6">
-        <div className="flex items-center justify-between h-28 py-4">
+        <div className="flex items-center justify-between h-32 py-4">
           {/* Logo - Centralizada */}
           <div className="flex-1 flex justify-center">
             <a
               href="#home"
-              className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300"
+              className="flex items-center space-x-3 hover:scale-105 transition-all duration-300 relative group"
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             >
+              {/* Efeito de brilho sutil */}
+              <div className="absolute inset-0 bg-gradient-to-r from-luxury-gold/10 via-transparent to-luxury-gold/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <img
                 src="https://growmoneydigital.com.br/italianboats/logo.png"
                 alt="Italian Boats"
-                className="h-24 w-auto object-contain"
+                className="h-28 w-auto object-contain drop-shadow-lg hover:drop-shadow-xl transition-all duration-300 relative z-10"
                 loading="eager"
               />
             </a>

@@ -40,7 +40,7 @@ const HeroSlider = () => {
     <section 
       id="home"
       ref={heroRef}
-      className="relative h-screen overflow-hidden pt-52"
+      className="relative h-screen overflow-hidden pt-56"
       style={{
         background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, hsl(var(--luxury-gold) / 0.1) 0%, transparent 50%)`
       }}
