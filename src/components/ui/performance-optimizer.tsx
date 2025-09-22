@@ -119,7 +119,7 @@ export const useIntersectionObserver = (
 };
 
 // Debounced hook for performance
-export const useDebounce = <T>(value: T, delay: number): T => {
+export const useDebounce = <T,>(value: T, delay: number): T => {
   const [debouncedValue, setDebouncedValue] = React.useState<T>(value);
 
   React.useEffect(() => {
@@ -136,7 +136,7 @@ export const useDebounce = <T>(value: T, delay: number): T => {
 };
 
 // Throttled hook for performance
-export const useThrottle = <T>(value: T, limit: number): T => {
+export const useThrottle = <T,>(value: T, limit: number): T => {
   const [throttledValue, setThrottledValue] = React.useState<T>(value);
   const lastRan = React.useRef<number>(Date.now());
 
