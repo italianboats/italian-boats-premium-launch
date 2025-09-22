@@ -128,7 +128,7 @@ const HeroSlider = () => {
               <div className="flex flex-col sm:flex-row gap-8 mb-16">
                 <button
                   onClick={handleCall}
-                  className="btn-luxury group relative overflow-hidden"
+                  className="btn-luxury group relative overflow-hidden text-lg sm:text-base"
                 >
                   <Phone className="w-6 h-6 mr-4 group-hover:animate-bounce relative z-10" />
                   <span className="relative z-10">Ligar Agora</span>
@@ -136,7 +136,7 @@ const HeroSlider = () => {
                 </button>
                 <button
                   onClick={handleWhatsApp}
-                  className="btn-outline-luxury group relative overflow-hidden"
+                  className="btn-outline-luxury group relative overflow-hidden text-lg sm:text-base"
                 >
                   <MessageCircle className="w-6 h-6 mr-4 group-hover:scale-110 transition-transform relative z-10" />
                   <span className="relative z-10">Falar com Especialista</span>
