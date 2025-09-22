@@ -79,12 +79,19 @@ const TraditionSection = () => {
       className="py-20 bg-gradient-italian relative overflow-hidden"
     >
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-playfair font-bold text-white mb-6">
-            Excelência em Cada Detalhe
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center mb-6">
+            <div className="w-12 h-px bg-luxury-gold mr-4"></div>
+            <span className="text-luxury-gold font-semibold tracking-wider uppercase text-sm font-helvetica-neue">
+              Nossa História
+            </span>
+            <div className="w-12 h-px bg-luxury-gold ml-4"></div>
+          </div>
+          <h2 className="text-6xl md:text-7xl font-helvetica-neue font-light text-white mb-8 leading-tight">
+            <span className="font-bold text-luxury-gold">Excelência</span> em Cada Detalhe
           </h2>
-          <p className="text-xl text-silver-mist max-w-3xl mx-auto leading-relaxed">
-            25+ anos construindo sonhos sobre as águas com a tradição e qualidade italiana
+          <p className="text-2xl text-silver-mist/90 max-w-4xl mx-auto leading-relaxed font-helvetica-narrow">
+            25+ anos construindo sonhos sobre as águas com a tradição e qualidade italiana que nos define
           </p>
         </div>
 
@@ -133,16 +140,16 @@ const TraditionSection = () => {
                   }`}
                 >
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/15 transition-all duration-300">
-                    <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-2">
+                    <h3 className="text-3xl font-helvetica-neue font-bold text-luxury-gold mb-3 tracking-tight">
                       {item.year}
                     </h3>
-                    <h4 className="text-lg font-semibold text-white mb-2">
+                    <h4 className="text-xl font-helvetica-neue font-bold text-white mb-3 leading-tight">
                       {item.title}
                     </h4>
-                    <p className="text-silver-mist text-sm mb-3">
+                    <p className="text-silver-mist/90 text-base mb-4 font-helvetica-narrow leading-relaxed">
                       {item.description}
                     </p>
-                    <div className="text-luxury-gold font-semibold text-sm">
+                    <div className="text-luxury-gold font-bold text-base font-helvetica-neue">
                       {item.metric}
                     </div>
                   </div>
@@ -155,21 +162,24 @@ const TraditionSection = () => {
         {/* Featured Achievement */}
         <div className="mt-20 text-center">
           <div className="inline-flex items-center justify-center space-x-8 bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-float">
-            <div className="text-center">
-              <div className="text-4xl font-playfair font-bold text-luxury-gold mb-2">25+</div>
-              <div className="text-silver-mist">Anos de Tradição</div>
+            <div className="text-center group cursor-pointer">
+              <div className="text-5xl font-helvetica-neue font-bold text-luxury-gold mb-3 group-hover:scale-110 transition-transform">25+</div>
+              <div className="text-silver-mist font-helvetica-narrow font-medium">Anos de Tradição</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-playfair font-bold text-luxury-gold mb-2">1000+</div>
-              <div className="text-silver-mist">Embarcações Entregues</div>
+            <div className="w-px h-16 bg-luxury-gold/30"></div>
+            <div className="text-center group cursor-pointer">
+              <div className="text-5xl font-helvetica-neue font-bold text-luxury-gold mb-3 group-hover:scale-110 transition-transform">1000+</div>
+              <div className="text-silver-mist font-helvetica-narrow font-medium">Embarcações Entregues</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-playfair font-bold text-luxury-gold mb-2">500+</div>
-              <div className="text-silver-mist">Famílias Satisfeitas</div>
+            <div className="w-px h-16 bg-luxury-gold/30"></div>
+            <div className="text-center group cursor-pointer">
+              <div className="text-5xl font-helvetica-neue font-bold text-luxury-gold mb-3 group-hover:scale-110 transition-transform">500+</div>
+              <div className="text-silver-mist font-helvetica-narrow font-medium">Famílias Satisfeitas</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-playfair font-bold text-luxury-gold mb-2">100%</div>
-              <div className="text-silver-mist">Qualidade Garantida</div>
+            <div className="w-px h-16 bg-luxury-gold/30"></div>
+            <div className="text-center group cursor-pointer">
+              <div className="text-5xl font-helvetica-neue font-bold text-luxury-gold mb-3 group-hover:scale-110 transition-transform">100%</div>
+              <div className="text-silver-mist font-helvetica-narrow font-medium">Qualidade Garantida</div>
             </div>
           </div>
         </div>

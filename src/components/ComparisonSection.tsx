@@ -19,12 +19,19 @@ const ComparisonSection = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-silver-mist to-white relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-playfair font-bold text-italian-navy mb-6">
-            A Verdade Sobre Barcos Usados
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center mb-6">
+            <div className="w-12 h-px bg-gradient-luxury mr-4"></div>
+            <span className="text-luxury-gold font-semibold tracking-wider uppercase text-sm font-helvetica-neue">
+              Comparação Honesta
+            </span>
+            <div className="w-12 h-px bg-gradient-luxury ml-4"></div>
+          </div>
+          <h2 className="text-6xl md:text-7xl font-helvetica-neue font-light text-italian-navy mb-8 leading-tight">
+            A <span className="font-bold text-luxury-gold">Verdade</span> Sobre Barcos Usados
           </h2>
-          <p className="text-xl text-charcoal max-w-3xl mx-auto leading-relaxed">
-            Descubra por que escolher um barco personalizado é o melhor investimento para sua família
+          <p className="text-2xl text-charcoal/80 max-w-4xl mx-auto leading-relaxed font-helvetica-narrow">
+            Descubra por que escolher um barco personalizado é o melhor investimento para sua família e seu futuro
           </p>
         </div>
 
@@ -35,10 +42,10 @@ const ComparisonSection = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-italian-red/10 rounded-full mb-4">
                 <XCircle className="w-8 h-8 text-italian-red" />
               </div>
-              <h3 className="text-3xl font-playfair font-bold text-italian-red mb-2">
-                Barcos Usados
+              <h3 className="text-4xl font-helvetica-neue font-bold text-italian-red mb-3 leading-tight">
+                Barcos <span className="font-light">Usados</span>
               </h3>
-              <p className="text-charcoal">Os riscos que você precisa conhecer</p>
+              <p className="text-charcoal/80 font-helvetica-narrow text-lg">Os riscos que você precisa conhecer</p>
             </div>
 
             <div className="space-y-6">
@@ -52,8 +59,8 @@ const ComparisonSection = () => {
                     <item.icon className="w-6 h-6 text-italian-red" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg text-italian-red mb-2">{item.title}</h4>
-                    <p className="text-charcoal">{item.description}</p>
+                    <h4 className="font-bold text-xl text-italian-red mb-2 font-helvetica-neue">{item.title}</h4>
+                    <p className="text-charcoal/80 font-helvetica-narrow">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -66,10 +73,10 @@ const ComparisonSection = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-luxury-gold/10 rounded-full mb-4">
                 <CheckCircle className="w-8 h-8 text-luxury-gold" />
               </div>
-              <h3 className="text-3xl font-playfair font-bold text-luxury-gold mb-2">
-                Italian Boats
+              <h3 className="text-4xl font-helvetica-neue font-bold text-luxury-gold mb-3 leading-tight">
+                Italian <span className="font-light">Boats</span>
               </h3>
-              <p className="text-charcoal">A excelência que você merece</p>
+              <p className="text-charcoal/80 font-helvetica-narrow text-lg">A excelência que você merece</p>
             </div>
 
             <div className="space-y-6">
@@ -83,8 +90,8 @@ const ComparisonSection = () => {
                     <item.icon className="w-6 h-6 text-luxury-gold" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg text-italian-navy mb-2">{item.title}</h4>
-                    <p className="text-charcoal">{item.description}</p>
+                    <h4 className="font-bold text-xl text-italian-navy mb-2 font-helvetica-neue">{item.title}</h4>
+                    <p className="text-charcoal/80 font-helvetica-narrow">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -94,8 +101,8 @@ const ComparisonSection = () => {
 
         {/* Call to Action Final */}
         <div className="text-center mt-16 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-          <h3 className="text-3xl font-playfair font-bold text-italian-navy mb-4">
-            Pare de aceitar o que existe. Crie o barco dos seus sonhos.
+          <h3 className="text-4xl md:text-5xl font-helvetica-neue font-bold text-italian-navy mb-6 leading-tight">
+            Pare de aceitar o que existe. <span className="text-luxury-gold">Crie</span> o barco dos seus sonhos.
           </h3>
           <button className="btn-luxury mt-6">
             Solicitar Orçamento Personalizado

@@ -98,12 +98,19 @@ const GallerySection = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-background to-silver-mist/20 relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-playfair font-bold text-italian-navy mb-6">
-            Galeria Exclusiva
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center mb-6">
+            <div className="w-12 h-px bg-gradient-luxury mr-4"></div>
+            <span className="text-luxury-gold font-semibold tracking-wider uppercase text-sm font-helvetica-neue">
+              Nossa Coleção
+            </span>
+            <div className="w-12 h-px bg-gradient-luxury ml-4"></div>
+          </div>
+          <h2 className="text-6xl md:text-7xl font-helvetica-neue font-light text-italian-navy mb-8 leading-tight">
+            Galeria <span className="font-bold text-luxury-gold">Exclusiva</span>
           </h2>
-          <p className="text-xl text-charcoal max-w-3xl mx-auto leading-relaxed">
-            Conheça nossa linha completa de embarcações e acessórios personalizados
+          <p className="text-2xl text-charcoal/80 max-w-4xl mx-auto leading-relaxed font-helvetica-narrow">
+            Conheça nossa linha completa de embarcações e acessórios personalizados com a qualidade italiana
           </p>
         </div>
 
@@ -149,10 +156,10 @@ const GallerySection = () => {
 
                   <div className="space-y-4">
                     <div>
-                      <h3 className="text-xl font-playfair font-bold text-italian-navy mb-2 group-hover:text-luxury-gold transition-colors duration-300">
+                      <h3 className="text-2xl font-helvetica-neue font-bold text-italian-navy mb-3 group-hover:text-luxury-gold transition-colors duration-500 leading-tight">
                         {item.title}
                       </h3>
-                      <p className="text-charcoal text-sm leading-relaxed">
+                      <p className="text-charcoal/80 text-base leading-relaxed font-helvetica-narrow">
                         {item.description}
                       </p>
                     </div>
@@ -223,7 +230,7 @@ const GallerySection = () => {
             <div className="p-8">
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-3xl font-playfair font-bold text-italian-navy">
+                  <h3 className="text-4xl font-helvetica-neue font-bold text-italian-navy leading-tight">
                     {selectedItem.title}
                   </h3>
                   <span className="px-4 py-2 bg-luxury-gold/10 text-luxury-gold font-semibold rounded-full">
@@ -237,7 +244,7 @@ const GallerySection = () => {
 
               {/* All Specs */}
               <div className="mb-8">
-                <h4 className="text-lg font-semibold text-italian-navy mb-4">Especificações</h4>
+                <h4 className="text-2xl font-helvetica-neue font-bold text-italian-navy mb-6">Especificações Técnicas</h4>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {selectedItem.specs.map((spec: string, index: number) => (
                     <div key={index} className="flex items-center space-x-2">

@@ -76,14 +76,14 @@ const Footer = () => {
                 <Anchor className="w-7 h-7 text-italian-navy" />
               </div>
               <div>
-                <h3 className="text-2xl font-playfair font-bold">Italian Boats</h3>
-                <p className="text-silver-mist text-sm">Tradição Italiana</p>
+                <h3 className="text-2xl font-helvetica-neue font-bold">Italian Boats</h3>
+                <p className="text-silver-mist text-sm font-helvetica-narrow">Tradição Italiana</p>
               </div>
             </div>
             
-            <p className="text-silver-mist mb-6 leading-relaxed">
-              Qualidade Italiana — Transformamos sonhos em realidade sobre as águas. 
-              Cada barco é uma obra de arte personalizada.
+            <p className="text-silver-mist mb-6 leading-relaxed font-helvetica-narrow text-base">
+              <span className="text-luxury-gold font-semibold">Qualidade Italiana</span> — Transformamos sonhos em realidade sobre as águas. 
+              Cada barco é uma obra de arte personalizada com excelência e dedicação.
             </p>
 
             {/* Achievements */}
@@ -103,7 +103,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-playfair font-bold mb-6">Links Rápidos</h4>
+            <h4 className="text-2xl font-helvetica-neue font-bold mb-8 text-luxury-gold">Links Rápidos</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -123,7 +123,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-xl font-playfair font-bold mb-6">Nossos Serviços</h4>
+            <h4 className="text-2xl font-helvetica-neue font-bold mb-8 text-luxury-gold">Nossos Serviços</h4>
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
@@ -143,7 +143,7 @@ const Footer = () => {
 
           {/* Contact & Newsletter */}
           <div>
-            <h4 className="text-xl font-playfair font-bold mb-6">Contato</h4>
+            <h4 className="text-2xl font-helvetica-neue font-bold mb-8 text-luxury-gold">Contato</h4>
             
             {/* Contact Info */}
             <div className="space-y-4 mb-8">
@@ -172,9 +172,9 @@ const Footer = () => {
 
             {/* Newsletter */}
             <div className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
-              <h5 className="font-semibold mb-3">Newsletter Exclusiva</h5>
-              <p className="text-silver-mist text-sm mb-4">
-                Receba novidades sobre barcos personalizados
+              <h5 className="font-bold mb-4 font-helvetica-neue text-luxury-gold">Newsletter Exclusiva</h5>
+              <p className="text-silver-mist text-base mb-6 font-helvetica-narrow">
+                Receba novidades sobre barcos personalizados e ofertas especiais
               </p>
               
               <form onSubmit={handleNewsletterSubmit} className="space-y-3">

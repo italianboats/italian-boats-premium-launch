@@ -58,12 +58,19 @@ const ServicesSection = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-background via-silver-mist/30 to-background relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-playfair font-bold text-italian-navy mb-6">
-            Serviços Especializados
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center mb-6">
+            <div className="w-12 h-px bg-gradient-luxury mr-4"></div>
+            <span className="text-luxury-gold font-semibold tracking-wider uppercase text-sm font-helvetica-neue">
+              Nossos Serviços
+            </span>
+            <div className="w-12 h-px bg-gradient-luxury ml-4"></div>
+          </div>
+          <h2 className="text-6xl md:text-7xl font-helvetica-neue font-light text-italian-navy mb-8 leading-tight">
+            Serviços <span className="font-bold text-luxury-gold">Especializados</span>
           </h2>
-          <p className="text-xl text-charcoal max-w-3xl mx-auto leading-relaxed">
-            Soluções completas em embarcações com a qualidade e tradição italiana
+          <p className="text-2xl text-charcoal/80 max-w-4xl mx-auto leading-relaxed font-helvetica-narrow">
+            Soluções completas em embarcações com a qualidade e tradição italiana que você merece
           </p>
         </div>
 
@@ -85,10 +92,10 @@ const ServicesSection = () => {
 
                 {/* Content */}
                 <div className="flex-grow">
-                  <h3 className="text-2xl font-playfair font-bold text-italian-navy mb-4 group-hover:text-luxury-gold transition-colors duration-300">
+                  <h3 className="text-3xl font-helvetica-neue font-bold text-italian-navy mb-4 group-hover:text-luxury-gold transition-colors duration-500 leading-tight">
                     {service.title}
                   </h3>
-                  <p className="text-charcoal mb-6 leading-relaxed">
+                  <p className="text-charcoal/80 mb-6 leading-relaxed font-helvetica-narrow text-lg">
                     {service.description}
                   </p>
 
@@ -124,11 +131,11 @@ const ServicesSection = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="bg-gradient-italian rounded-2xl p-12 text-white">
-            <h3 className="text-3xl font-playfair font-bold mb-4">
-              Precisa de um Serviço Específico?
+            <h3 className="text-4xl md:text-5xl font-helvetica-neue font-bold mb-6 leading-tight">
+              Precisa de um Serviço <span className="text-luxury-gold">Específico</span>?
             </h3>
-            <p className="text-silver-mist mb-8 max-w-2xl mx-auto">
-              Nossa equipe especializada está pronta para atender todas as suas necessidades náuticas
+            <p className="text-silver-mist/90 mb-10 max-w-3xl mx-auto text-xl font-helvetica-narrow leading-relaxed">
+              Nossa equipe especializada está pronta para atender todas as suas necessidades náuticas com excelência e dedicação
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-luxury">

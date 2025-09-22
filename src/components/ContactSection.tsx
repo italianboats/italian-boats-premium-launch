@@ -83,12 +83,19 @@ const ContactSection = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-silver-mist/30 to-background relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-playfair font-bold text-italian-navy mb-6">
-            Fale Conosco
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center mb-6">
+            <div className="w-12 h-px bg-gradient-luxury mr-4"></div>
+            <span className="text-luxury-gold font-semibold tracking-wider uppercase text-sm font-helvetica-neue">
+              Entre em Contato
+            </span>
+            <div className="w-12 h-px bg-gradient-luxury ml-4"></div>
+          </div>
+          <h2 className="text-6xl md:text-7xl font-helvetica-neue font-light text-italian-navy mb-8 leading-tight">
+            Fale <span className="font-bold text-luxury-gold">Conosco</span>
           </h2>
-          <p className="text-xl text-charcoal max-w-3xl mx-auto leading-relaxed">
-            Transforme seu sonho náutico em realidade. Nossa equipe está pronta para criar a embarcação perfeita para você.
+          <p className="text-2xl text-charcoal/80 max-w-4xl mx-auto leading-relaxed font-helvetica-narrow">
+            Transforme seu sonho náutico em realidade. Nossa equipe está pronta para criar a embarcação perfeita para você e sua família.
           </p>
         </div>
 
@@ -96,8 +103,8 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div className="lg:col-span-1 space-y-8">
             <div className="luxury-card p-8">
-              <h3 className="text-2xl font-playfair font-bold text-italian-navy mb-8">
-                Informações de Contato
+              <h3 className="text-3xl font-helvetica-neue font-bold text-italian-navy mb-10 leading-tight">
+                Informações de <span className="text-luxury-gold">Contato</span>
               </h3>
               
               <div className="space-y-6">
@@ -154,8 +161,8 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <div className="luxury-card p-8">
-              <h3 className="text-2xl font-playfair font-bold text-italian-navy mb-8">
-                Solicite seu Orçamento
+              <h3 className="text-3xl font-helvetica-neue font-bold text-italian-navy mb-10 leading-tight">
+                Solicite seu <span className="text-luxury-gold">Orçamento</span>
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -279,8 +286,8 @@ const ContactSection = () => {
         {/* Interactive Map Placeholder */}
         <div className="mt-16">
           <div className="luxury-card p-8">
-            <h3 className="text-2xl font-playfair font-bold text-italian-navy mb-6 text-center">
-              Nossa Localização - Marina Porto Bello
+            <h3 className="text-3xl font-helvetica-neue font-bold text-italian-navy mb-8 text-center leading-tight">
+              Nossa <span className="text-luxury-gold">Localização</span> - Marina Porto Bello
             </h3>
             <div className="bg-silver-mist rounded-xl h-96 flex items-center justify-center">
               <div className="text-center">
