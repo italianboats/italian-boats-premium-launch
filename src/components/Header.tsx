@@ -65,7 +65,7 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-6 pb-6">
-        <div className="flex items-center justify-between h-24 py-4">
+        <div className="flex items-center justify-between h-28 py-4">
           {/* Logo - Centralizada */}
           <div className="flex-1 flex justify-center">
             <a
@@ -79,7 +79,7 @@ const Header = () => {
               <img
                 src="https://growmoneydigital.com.br/italianboats/logo.png"
                 alt="Italian Boats"
-                className="h-20 w-auto object-contain"
+                className="h-24 w-auto object-contain"
                 loading="eager"
               />
             </a>
