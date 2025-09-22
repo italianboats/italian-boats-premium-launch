@@ -38,8 +38,9 @@ const HeroSlider = () => {
 
   return (
     <section 
+      id="home"
       ref={heroRef}
-      className="relative h-screen overflow-hidden"
+      className="relative h-screen overflow-hidden pt-48"
       style={{
         background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, hsl(var(--luxury-gold) / 0.1) 0%, transparent 50%)`
       }}
@@ -82,7 +83,7 @@ const HeroSlider = () => {
       </div>
 
       {/* Enhanced Content Overlay */}
-      <div className="relative z-10 h-full flex items-center">
+      <div className="relative z-10 h-full flex items-center pt-8">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl">
             <div

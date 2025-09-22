@@ -76,7 +76,7 @@ const GallerySection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-background to-silver-mist/20 relative overflow-hidden">
+    <section id="gallery" className="py-20 bg-gradient-to-br from-background to-silver-mist/20 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
           <div className="inline-flex items-center justify-center mb-6">

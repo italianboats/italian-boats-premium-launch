@@ -17,7 +17,7 @@ const ComparisonSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-silver-mist to-white relative overflow-hidden">
+    <section id="services" className="py-20 bg-gradient-to-br from-silver-mist to-white relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
           <div className="inline-flex items-center justify-center mb-6">

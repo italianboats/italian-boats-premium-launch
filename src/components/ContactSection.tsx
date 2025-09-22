@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Send, Phone, MapPin, Clock, Mail, MessageCircle, User, Star } from 'lucide-react';
+import ResponsiveAccordion from './ui/responsive-accordion';
+import ResponsiveDropdown from './ui/responsive-dropdown';
+import ResponsiveLayout from './ui/responsive-layout';
+import PerformanceOptimizer from './ui/performance-optimizer';
 import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
@@ -81,7 +85,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-silver-mist/30 to-background relative overflow-hidden">
+    <section id="contact" className="py-20 bg-gradient-to-br from-silver-mist/30 to-background relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
           <div className="inline-flex items-center justify-center mb-6">
@@ -281,6 +285,93 @@ const ContactSection = () => {
               </form>
             </div>
           </div>
+        </div>
+
+        {/* FAQ Section with Responsive Accordion */}
+        <div className="mt-16">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-helvetica-neue font-bold text-italian-navy mb-4">
+              Perguntas <span className="text-luxury-gold">Frequentes</span>
+            </h3>
+            <p className="text-charcoal/80 text-lg max-w-2xl mx-auto">
+              Tire suas dúvidas sobre nossos serviços e processos
+            </p>
+          </div>
+          
+          <PerformanceOptimizer>
+            <ResponsiveAccordion
+              items={[
+                {
+                  id: 'faq-1',
+                  title: 'Quanto tempo leva para construir um barco personalizado?',
+                  content: (
+                    <div className="space-y-3">
+                      <p>O tempo de construção varia de acordo com o tipo e complexidade do barco:</p>
+                      <ul className="list-disc list-inside space-y-2 ml-4">
+                        <li>Lanchas pequenas (até 25 pés): 3-6 meses</li>
+                        <li>Lanchas médias (25-35 pés): 6-12 meses</li>
+                        <li>Lanchas grandes (35+ pés): 12-18 meses</li>
+                        <li>Barcos de luxo: 18-24 meses</li>
+                      </ul>
+                      <p className="text-sm text-charcoal/70">
+                        * Prazos podem variar conforme especificações e disponibilidade de materiais.
+                      </p>
+                    </div>
+                  )
+                },
+                {
+                  id: 'faq-2',
+                  title: 'Quais materiais são utilizados na construção?',
+                  content: (
+                    <div className="space-y-3">
+                      <p>Utilizamos apenas materiais de primeira qualidade:</p>
+                      <ul className="list-disc list-inside space-y-2 ml-4">
+                        <li>Fibra de vidro de alta resistência</li>
+                        <li>Resina epóxi premium</li>
+                        <li>Madeira nobre italiana (mogno, teca)</li>
+                        <li>Couro italiano para acabamentos</li>
+                        <li>Equipamentos náuticos de última geração</li>
+                      </ul>
+                    </div>
+                  )
+                },
+                {
+                  id: 'faq-3',
+                  title: 'Oferecem garantia nos barcos construídos?',
+                  content: (
+                    <div className="space-y-3">
+                      <p>Sim, oferecemos garantia completa:</p>
+                      <ul className="list-disc list-inside space-y-2 ml-4">
+                        <li>Estrutura: 5 anos</li>
+                        <li>Motor e equipamentos: 2 anos</li>
+                        <li>Acabamentos: 3 anos</li>
+                        <li>Suporte técnico: 24/7</li>
+                      </ul>
+                    </div>
+                  )
+                },
+                {
+                  id: 'faq-4',
+                  title: 'Como funciona o processo de personalização?',
+                  content: (
+                    <div className="space-y-3">
+                      <p>Nosso processo é dividido em etapas:</p>
+                      <ol className="list-decimal list-inside space-y-2 ml-4">
+                        <li>Consulta inicial e briefing</li>
+                        <li>Desenvolvimento do projeto 3D</li>
+                        <li>Aprovação do cliente</li>
+                        <li>Início da construção</li>
+                        <li>Acompanhamento mensal</li>
+                        <li>Entrega e treinamento</li>
+                      </ol>
+                    </div>
+                  )
+                }
+              ]}
+              allowMultiple={true}
+              className="max-w-4xl mx-auto"
+            />
+          </PerformanceOptimizer>
         </div>
 
         {/* Interactive Map */}
