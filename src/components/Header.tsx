@@ -127,7 +127,7 @@ const Header = () => {
               className="btn-luxury text-sm px-4 py-2"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
-              WhatsApp
+              Ligue agora
             </a>
           </div>
 
@@ -160,7 +160,7 @@ const Header = () => {
               className="flex items-center space-x-2 text-luxury-gold hover:text-italian-navy transition-colors px-3 py-2 rounded-lg hover:bg-luxury-gold/10"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>WhatsApp</span>
+                    <span>Ligue agora</span>
             </a>
           </div>
         </div>

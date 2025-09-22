@@ -65,7 +65,7 @@ const ContactSection = () => {
       icon: Phone,
       title: "Telefone",
       info: "(62) 9 9363-9673",
-      details: "WhatsApp disponível",
+            details: "Ligue agora disponível",
       color: "marine-blue"
     },
     {
@@ -136,7 +136,7 @@ const ContactSection = () => {
                 className="w-full mt-8 flex items-center justify-center space-x-3 bg-green-500 hover:bg-green-600 text-white font-semibold py-4 rounded-xl transition-all duration-300 hover:scale-105"
               >
                 <MessageCircle className="w-6 h-6" />
-                <span>Chamar no WhatsApp</span>
+                <span>Ligue agora</span>
               </button>
             </div>
 
