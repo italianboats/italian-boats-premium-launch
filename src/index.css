@@ -315,7 +315,7 @@
 
   /* Enhanced luxury card with premium effects */
   .luxury-card {
-    @apply bg-white/98 backdrop-blur-xl rounded-3xl border-2 transition-all duration-700 hover:-translate-y-4 hover:scale-105 relative overflow-hidden;
+    @apply bg-background/95 backdrop-blur-xl rounded-3xl border-2 transition-all duration-700 hover:-translate-y-4 hover:scale-105 relative overflow-hidden;
     border-color: hsl(var(--luxury-gold) / 0.2);
     box-shadow: var(--shadow-luxury), inset 0 1px 2px hsl(var(--pearl));
   }

@@ -142,7 +142,7 @@ const HeroSlider = () => {
               <img
                 src={slide.image}
                 alt={slide.titleParts.map(part => part.text).join('')}
-                className={`w-full h-full object-cover transition-transform duration-[10s] ease-out ${
+                className={`w-full h-full object-cover transition-transform duration-[10000ms] ease-out ${
                   index === currentSlide ? 'scale-110' : 'scale-100'
                 }`}
                 style={{
