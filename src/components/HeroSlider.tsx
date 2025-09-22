@@ -82,7 +82,7 @@ const HeroSlider = () => {
       </div>
 
       {/* Enhanced Content Overlay */}
-      <div className="relative z-10 h-full flex items-center">
+      <div className="relative z-10 h-full flex items-start pt-24 md:pt-32 lg:pt-40">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl">
             <div
