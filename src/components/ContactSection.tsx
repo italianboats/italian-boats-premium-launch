@@ -85,25 +85,25 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-silver-mist/30 to-background relative overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center justify-center mb-6">
-            <div className="w-12 h-px bg-gradient-luxury mr-4"></div>
-            <span className="text-luxury-gold font-semibold tracking-wider uppercase text-sm font-helvetica-neue">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-silver-mist/30 to-background relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="inline-flex items-center justify-center mb-4 sm:mb-6">
+            <div className="w-8 sm:w-12 h-px bg-gradient-luxury mr-2 sm:mr-4"></div>
+            <span className="text-luxury-gold font-semibold tracking-wider uppercase text-xs sm:text-sm font-helvetica-neue">
               Entre em Contato
             </span>
-            <div className="w-12 h-px bg-gradient-luxury ml-4"></div>
+            <div className="w-8 sm:w-12 h-px bg-gradient-luxury ml-2 sm:ml-4"></div>
           </div>
-          <h2 className="text-6xl md:text-7xl font-helvetica-neue font-light text-italian-navy mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-helvetica-neue font-light text-italian-navy mb-6 sm:mb-8 leading-tight">
             Fale <span className="font-bold text-luxury-gold">Conosco</span>
           </h2>
-          <p className="text-2xl text-charcoal/80 max-w-4xl mx-auto leading-relaxed font-helvetica-narrow">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-charcoal/80 max-w-4xl mx-auto leading-relaxed font-helvetica-narrow px-4">
             Transforme seu sonho náutico em realidade. Nossa equipe está pronta para criar a embarcação perfeita para você e sua família.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12 items-start">
+        <div className="grid lg:grid-cols-3 gap-8 sm:gap-12 items-start">
           {/* Contact Information */}
           <div className="lg:col-span-1 space-y-8">
             <div className="luxury-card p-8">

@@ -64,8 +64,8 @@ const Header = () => {
           : 'bg-transparent border-b border-luxury-gold/20'
       }`}
     >
-      <div className="container mx-auto px-6 pb-6">
-        <div className="flex items-center justify-between h-32 py-4">
+      <div className="container mx-auto px-4 sm:px-6 pb-4 sm:pb-6">
+        <div className="flex items-center justify-between h-24 sm:h-28 lg:h-32 py-2 sm:py-4">
           {/* Logo - Centralizada */}
           <div className="flex-1 flex justify-center">
             <a
@@ -81,14 +81,14 @@ const Header = () => {
               <img
                 src="https://growmoneydigital.com.br/italianboats/logo.png"
                 alt="Italian Boats"
-                className="h-28 w-auto object-contain drop-shadow-lg hover:drop-shadow-xl transition-all duration-300 relative z-10"
+                className="h-16 sm:h-20 lg:h-28 w-auto object-contain drop-shadow-lg hover:drop-shadow-xl transition-all duration-300 relative z-10"
                 loading="eager"
               />
             </a>
           </div>
 
           {/* Desktop Navigation - Hidden on mobile */}
-          <nav className="hidden lg:flex items-center space-x-6 px-4">
+          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6 px-2 lg:px-4">
             {menuItems.map((item) => (
               <a
                 key={item.id}
@@ -110,7 +110,7 @@ const Header = () => {
           </nav>
 
           {/* Contact Info - Hidden on mobile */}
-          <div className="hidden lg:flex items-center space-x-4 px-4">
+          <div className="hidden lg:flex items-center space-x-2 xl:space-x-4 px-2 lg:px-4">
             <a
               href="tel:+5562993639673"
               className={`flex items-center space-x-2 font-medium transition-colors duration-300 hover:text-luxury-gold ${
@@ -118,13 +118,13 @@ const Header = () => {
               }`}
             >
               <Phone className="w-4 h-4" />
-              <span className="text-sm">(62) 9 9363-9673</span>
+              <span className="text-xs xl:text-sm">(62) 9 9363-9673</span>
             </a>
             <a
               href="https://wa.me/5562993639673"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-luxury text-sm px-4 py-2"
+              className="btn-luxury text-xs xl:text-sm px-3 xl:px-4 py-2"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
               Ligue agora
@@ -144,8 +144,8 @@ const Header = () => {
 
       {/* Mobile Contact Bar */}
       <div className="lg:hidden bg-luxury-gold/10 backdrop-blur-sm border-t border-luxury-gold/20">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between text-sm space-x-4">
+        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+          <div className="flex items-center justify-between text-xs sm:text-sm space-x-2 sm:space-x-4">
             <a
               href="tel:+5562993639673"
               className="flex items-center space-x-2 text-italian-navy hover:text-luxury-gold transition-colors px-3 py-2 rounded-lg hover:bg-luxury-gold/10"

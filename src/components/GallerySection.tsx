@@ -76,26 +76,26 @@ const GallerySection = () => {
   };
 
   return (
-    <section id="gallery" className="py-20 bg-gradient-to-br from-background to-silver-mist/20 relative overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center justify-center mb-6">
-            <div className="w-12 h-px bg-gradient-luxury mr-4"></div>
-            <span className="text-luxury-gold font-semibold tracking-wider uppercase text-sm font-helvetica-neue">
+    <section id="gallery" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-background to-silver-mist/20 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="inline-flex items-center justify-center mb-4 sm:mb-6">
+            <div className="w-8 sm:w-12 h-px bg-gradient-luxury mr-2 sm:mr-4"></div>
+            <span className="text-luxury-gold font-semibold tracking-wider uppercase text-xs sm:text-sm font-helvetica-neue">
               Nossa Coleção
             </span>
-            <div className="w-12 h-px bg-gradient-luxury ml-4"></div>
+            <div className="w-8 sm:w-12 h-px bg-gradient-luxury ml-2 sm:ml-4"></div>
           </div>
-          <h2 className="text-6xl md:text-7xl font-helvetica-neue font-light text-italian-navy mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-helvetica-neue font-light text-italian-navy mb-6 sm:mb-8 leading-tight">
             Galeria <span className="font-bold text-luxury-gold">Exclusiva</span>
           </h2>
-          <p className="text-2xl text-charcoal/80 max-w-4xl mx-auto leading-relaxed font-helvetica-narrow">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-charcoal/80 max-w-4xl mx-auto leading-relaxed font-helvetica-narrow px-4">
             Conheça nossa linha completa de embarcações personalizadas com a qualidade italiana
           </p>
         </div>
 
         {/* Simple Image Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {galleryImages.map((image, index) => (
             <div
               key={image.id}
@@ -103,12 +103,12 @@ const GallerySection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => openModal(image)}
             >
-              <div className="relative overflow-hidden rounded-xl shadow-elegant hover:shadow-luxury transition-all duration-500 group-hover:scale-105">
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+                    <div className="relative overflow-hidden rounded-xl shadow-elegant hover:shadow-luxury transition-all duration-500 group-hover:scale-105">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-48 sm:h-64 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
                 <div className="absolute inset-0 bg-gradient-to-t from-italian-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110">
                   <Expand className="w-5 h-5 text-italian-navy" />

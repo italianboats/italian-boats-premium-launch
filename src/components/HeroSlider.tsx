@@ -40,7 +40,7 @@ const HeroSlider = () => {
     <section 
       id="home"
       ref={heroRef}
-      className="relative h-screen overflow-hidden pt-56"
+      className="relative h-screen overflow-hidden pt-20 sm:pt-24 md:pt-32 lg:pt-40 xl:pt-56"
       style={{
         background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, hsl(var(--luxury-gold) / 0.1) 0%, transparent 50%)`
       }}
@@ -83,22 +83,22 @@ const HeroSlider = () => {
       </div>
 
       {/* Enhanced Content Overlay */}
-      <div className="relative z-10 h-full flex items-center pt-8">
-        <div className="container mx-auto px-6">
+      <div className="relative z-10 h-full flex items-center pt-4 sm:pt-6 lg:pt-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl">
             <div
               className={`transition-all duration-1000 opacity-100 transform translate-y-0 scale-100 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}
             >
               {/* Decorative element */}
-              <div className="flex items-center mb-6 animate-slide-in-right">
-                <Sparkles className="w-6 h-6 text-luxury-gold mr-3 animate-pulse" />
-                <span className="text-luxury-gold font-semibold tracking-wider uppercase text-sm">
+              <div className="flex items-center mb-4 sm:mb-6 animate-slide-in-right">
+                <Sparkles className="w-4 h-4 sm:w-6 sm:h-6 text-luxury-gold mr-2 sm:mr-3 animate-pulse" />
+                <span className="text-luxury-gold font-semibold tracking-wider uppercase text-xs sm:text-sm">
                   Tradição Italiana Premium
                 </span>
-                <div className="ml-4 w-16 h-px bg-gradient-luxury"></div>
+                <div className="ml-2 sm:ml-4 w-8 sm:w-16 h-px bg-gradient-luxury"></div>
               </div>
               
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight relative">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight relative">
                 <span
                   className="inline-block hero-title-primary"
                   style={{
@@ -120,16 +120,16 @@ const HeroSlider = () => {
                 <div className="absolute -top-4 -right-4 w-8 h-8 border border-luxury-gold/30 rounded-full animate-pulse"></div>
               </h1>
               
-              <p className="hero-subtitle text-xl md:text-3xl text-silver-mist mb-12 max-w-4xl leading-relaxed relative">
+              <p className="hero-subtitle text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-silver-mist mb-8 sm:mb-12 max-w-4xl leading-relaxed relative">
                 <span className="relative z-10">Você encomenda um barco novo, feito do zero, sob medida para você.</span>
                 <div className="absolute bottom-0 left-0 w-20 h-px bg-gradient-luxury animate-pulse"></div>
               </p>
               
               {/* Enhanced CTAs */}
-              <div className="flex flex-col sm:flex-row gap-8 mb-16">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
                 <button
                   onClick={handleCall}
-                  className="btn-luxury group relative overflow-hidden text-lg sm:text-base"
+                  className="btn-luxury group relative overflow-hidden text-sm sm:text-base lg:text-lg px-4 sm:px-6 py-3 sm:py-4"
                 >
                   <Phone className="w-6 h-6 mr-4 group-hover:animate-bounce relative z-10" />
                   <span className="relative z-10">Ligar Agora</span>
@@ -137,7 +137,7 @@ const HeroSlider = () => {
                 </button>
                 <button
                   onClick={handleWhatsApp}
-                  className="btn-outline-luxury group relative overflow-hidden text-lg sm:text-base"
+                  className="btn-outline-luxury group relative overflow-hidden text-sm sm:text-base lg:text-lg px-4 sm:px-6 py-3 sm:py-4"
                 >
                   <MessageCircle className="w-6 h-6 mr-4 group-hover:scale-110 transition-transform relative z-10" />
                   <span className="relative z-10">Falar com Especialista</span>
@@ -146,7 +146,7 @@ const HeroSlider = () => {
               </div>
 
               {/* Enhanced Floating Badge */}
-              <div className="floating-badge inline-flex items-center space-x-8 animate-float relative">
+              <div className="floating-badge inline-flex flex-wrap items-center gap-4 sm:gap-6 lg:gap-8 animate-float relative">
                 <div className="flex items-center space-x-3 group cursor-pointer">
                   <Award className="w-6 h-6 text-luxury-gold group-hover:animate-pulse" />
                   <div>
