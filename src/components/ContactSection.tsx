@@ -283,21 +283,48 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Interactive Map Placeholder */}
+        {/* Interactive Map */}
         <div className="mt-16">
           <div className="luxury-card p-8">
             <h3 className="text-3xl font-helvetica-neue font-bold text-italian-navy mb-8 text-center leading-tight">
-              Nossa <span className="text-luxury-gold">Localização</span> - Marina Porto Bello
+              Nossa <span className="text-luxury-gold">Localização</span> - Goiânia
             </h3>
-            <div className="bg-silver-mist rounded-xl h-96 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-luxury-gold mx-auto mb-4" />
-                <h4 className="text-xl font-semibold text-italian-navy mb-2">Marina Porto Bello - SC</h4>
-                <p className="text-charcoal">Localização privilegiada para sua nova embarcação</p>
-                <button className="btn-outline-luxury mt-6">
-                  Ver no Google Maps
-                </button>
+            
+            {/* Endereço */}
+            <div className="text-center mb-6">
+              <div className="flex items-center justify-center mb-4">
+                <MapPin className="w-6 h-6 text-luxury-gold mr-3" />
+                <h4 className="text-xl font-semibold text-italian-navy">Av. Ville, 1515 - Residential Eli Forte</h4>
               </div>
+              <p className="text-charcoal text-lg">Goiânia - GO, 74369-023</p>
+            </div>
+
+            {/* Google Maps Embed */}
+            <div className="rounded-xl overflow-hidden shadow-elegant">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.1234567890!2d-49.1234567!3d-16.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcfa8d815f90e5cbf!2sItalian%20boats!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização Italian Boats - Goiânia"
+                className="w-full"
+              ></iframe>
+            </div>
+
+            {/* Botão para abrir no Google Maps */}
+            <div className="text-center mt-6">
+              <a
+                href="https://www.google.com/maps/place/Italian+boats/data=!4m2!3m1!1s0x0:0xcfa8d815f90e5cbf?sa=X&ved=1t:2428&ictx=111"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline-luxury inline-flex items-center"
+              >
+                <MapPin className="w-5 h-5 mr-2" />
+                Abrir no Google Maps
+              </a>
             </div>
           </div>
         </div>
